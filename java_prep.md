@@ -69,6 +69,14 @@ public class ThreadDemo {
 -	Reads and writes are atomic for all variables declared volatile (including long and double variables).
 -	Changes to a volatile variable are always visible to other threads, thus reducing memory consistency errors.
 
+#### Immutable Classes
+-	The internal state does not change after construction.
+-	Don't provide "setter" methods — methods that modify fields or objects referred to by fields.
+-	Make all fields final and private.
+-	Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.
+-	Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies.
+-	Create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
+
 ### JVM, memory management, concurrent garbage collection
 
 ### DDL vs DML
