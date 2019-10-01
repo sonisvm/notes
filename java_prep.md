@@ -68,6 +68,8 @@ public class ThreadDemo {
 - 	Reads and writes are atomic for reference variables and for most primitive variables (all types except long and double).
 -	Reads and writes are atomic for all variables declared volatile (including long and double variables).
 -	Changes to a volatile variable are always visible to other threads, thus reducing memory consistency errors.
+-	All writes to a volatile variable are written to main memory, bypassing cache, and all reads are from the main memory.
+-	When a volatile variable is written to memory, all the variables updated till the volatile variable are also written back to memory. Similarly, when a volatile variable is read, all the variables visible to the thread till then are read from memory.
 
 #### Immutable Classes
 -	The internal state does not change after construction.
