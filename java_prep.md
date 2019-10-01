@@ -92,7 +92,7 @@ public class ThreadDemo {
 	-	Extension class loader loads class files from extensions directory, e.g. security extensions.
 	-	Application class loader loads application specific classes from the system class path.
 
-#### Java Memory Management
+### Java Memory Management
 
 -	JVM memory is divided into multiple parts: Heap Memory, Non-Heap Memory, and Other.
 -	Heap memory is the run time data area from which the memory for all java class instances and arrays is allocated.
