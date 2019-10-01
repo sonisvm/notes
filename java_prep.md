@@ -114,6 +114,14 @@ public class ThreadDemo {
 -	Memory Pools are created by JVM memory managers to create pool of immutable objects.
 -	Runtime constant pool is a per-class runtime representation of constant pool in a class.
 
+### Garbage Collection
+
+- Garbage collection happens in three steps
+	-	Marking: This is the first step where garbage collector identifies which objects are in use and which ones are not in use.
+		-	During the mark phase, all the objects that are reachable from Java threads, native handlers and other root sources are marked as alive, as well as the objects that are reachable from these objects and so forth.
+	-	Normal Deletion: Garbage collector removes the unused objects and reclaims the free space to be allocated to other objects.
+	-	Deletion with compacting: For better performance, after deleting unused objects, all the survived objects can be moved to be together. This will increase the performance of allocation of memory to newer objects.
+
 ### DDL vs DML
 
 ### Scalability with low latency
