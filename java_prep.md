@@ -79,7 +79,18 @@ public class ThreadDemo {
 -	Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies.
 -	Create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
 
-### JVM, memory management, concurrent garbage collection
+### JVM
+-	JVM is an abstract computing machine.
+-	It has an instruction set and manipulates areas of memory at run time.
+-	The Java Virtual Machine knows nothing of the Java programming language, only of a particular binary format, the **class** file format. A class file contains Java Virtual Machine instructions (or bytecodes) and a symbol table, as well as other ancillary information.
+-	The Java Virtual Machine imposes strong syntactic and structural constraints on the code in a class file. However, any language with functionality that can be expressed in terms of a valid **class** file can be hosted by the Java Virtual Machine.
+-	Class Loader subsystem
+	-	Class loader subsystem loads, links and initializes class files when the class is referred for the first time at runtime - dynamic class loading.
+	-	The class loading process starts from loading the main class.
+	-	There are three class loaders - Bootstrap class loader, Extension class loader and Application class loader.
+	-	Bootstrap class loader loads the core Java classes.
+	-	Extension class loader loads class files from extensions directory, e.g. security extensions.
+	-	Application class loader loads application specific classes from the system class path.
 
 ### DDL vs DML
 
