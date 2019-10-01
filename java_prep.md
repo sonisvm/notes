@@ -17,7 +17,7 @@
 		- 	Calling start() method of the subclass instance will start the thread.
 		-	**Why call start() instead of run()?**
 			-	Start() method will create a new thread by allocating a new stack and run() is then called in the context of the new thread.
-			-	If runt() is called directly, the method will run in the context of the current thread, rather than the new thread.
+			-	If run() is called directly, the method will run in the context of the current thread, rather than the new thread.
 	-	Implementing the Runnable interface
 		-	The implementing class should implement run() method.
 		-	An instance of this class is then passed to the Thread constructor.
