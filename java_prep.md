@@ -92,6 +92,28 @@ public class ThreadDemo {
 	-	Extension class loader loads class files from extensions directory, e.g. security extensions.
 	-	Application class loader loads application specific classes from the system class path.
 
+#### Java Memory Management
+
+-	JVM memory is divided into multiple parts: Heap Memory, Non-Heap Memory, and Other.
+-	Heap memory is the run time data area from which the memory for all java class instances and arrays is allocated.
+-	Non-Heap memory is created at the JVM startup and stores per-class structures such as runtime constant pool, field and method data, and the code for methods and constructors.
+-	Other memory is used by JVM to store the JVM code itself, JVM internal structures, loaded profiler agent code and data, etc.
+-	The JVM heap is physically divided into two parts (or generations): nursery (or young space/young generation) and old space (or old generation).
+	-	The nursery is a part of the heap reserved for allocation of new objects.
+	-	The reasoning behind a nursery is that most objects are temporary and short lived.
+	-	When the nursery becomes full, garbage is collected by running a special young collection, where all the objects that have lived long enough in the nursery are promoted (moved) to the old space. This garbage collection is called Minor GC.
+	-	The nursery is divide into three parts –one Eden Memory and two Survivor Memory spaces.
+	-	Most of the newly created objects are located in the Eden Memory space.
+	-	When Eden space is filled with objects, Minor GC is performed and all the survivor objects are moved to one of the survivor spaces.
+	-	Minor GC also checks the survivor objects and moves them to the other survivor space. So at a time, one of the survivor space is always empty.
+	-	Objects that have survived many cycles of GC, are moved to the old generation memory space.
+	-	When the old generation becomes full, garbage is collected there and the process is called as old collection.
+	-	Old generation garbage collection is called as Major GC and usually takes longer time.
+-	Metaspace contains the application metadata required by the JVM to describe the classes and methods used in the application.
+-	Metaspace is not part of the heap.
+-	Memory Pools are created by JVM memory managers to create pool of immutable objects.
+-	Runtime constant pool is a per-class runtime representation of constant pool in a class.
+
 ### DDL vs DML
 
 ### Scalability with low latency
