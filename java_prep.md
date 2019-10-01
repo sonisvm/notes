@@ -122,14 +122,11 @@ public class ThreadDemo {
 	-	Normal Deletion: Garbage collector removes the unused objects and reclaims the free space to be allocated to other objects.
 	-	Deletion with compacting: For better performance, after deleting unused objects, all the survived objects can be moved to be together. This will increase the performance of allocation of memory to newer objects.
 
-### DDL vs DML
-
-### Scalability with low latency
-
-### SQL vs NoSQL
-
-### Data modeling
-
-### Client-server networking concepts
-
 ### Design Patterns
+
+-	Singleton Pattern
+	-	Singleton pattern restricts the instantiation of a class and ensures that only one instance of the class exists in the Java virtual machine.
+-	Factory Pattern
+	-	Factory design pattern is used when we have a super class with multiple sub-classes and based on input, we need to return one of the sub-class.
+-	Builder Pattern
+	-	Setter methods will return the handle to the instance so that you can call further setters on it. Useful if the class has multiple parameters and all of them are not used all the time.
