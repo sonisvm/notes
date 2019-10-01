@@ -56,6 +56,19 @@ public class ThreadDemo {
 -	By convention, any method that exits by throwing an InterruptedException clears interrupt status when it does so.
 -	The join() method allows one thread to wait for the completion of another.
 
+#### Synchronization
+-	 Java provides two basic synchronization idioms: synchronized methods and synchronized statements.
+-	Constructors cannot be synchronized.
+-	Final fields, which cannot be modified after the object is constructed, can be safely read through non-synchronized methods, once the object is constructed.
+-	Every object and every class has an intrinsic lock associated with it.
+-	When a thread invokes a synchronized method, it automatically acquires the intrinsic lock for that method's object and releases it when the method returns.
+-	When a static synchronized method is invoked, the intrinsic lock associated with the class is acquired.
+-	 Synchronized statements must specify the object that provides the intrinsic lock.
+-	A thread can acquire a lock that it already owns - reentrant synchronization.
+- 	Reads and writes are atomic for reference variables and for most primitive variables (all types except long and double).
+-	Reads and writes are atomic for all variables declared volatile (including long and double variables).
+-	Changes to a volatile variable are always visible to other threads, thus reducing memory consistency errors.
+
 ### JVM, memory management, concurrent garbage collection
 
 ### DDL vs DML
