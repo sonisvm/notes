@@ -140,3 +140,9 @@ public class ThreadDemo {
 | ArrayList | Insertion order  | No | Deep check | Yes |
 | CopyOnWriteArrayList  | Insertion order  | Yes | Deep check | Yes |
 | LinkedList  | Insertion order | No | Deep check | Yes |
+
+List                 | Add  | Remove | Get  | Contains | Next | Data Structure
+---------------------|------|--------|------|----------|------|---------------
+ArrayList            | O(1) |  O(n)  | O(1) |   O(n)   | O(1) | Array
+LinkedList           | O(1) |  O(1)  | O(n) |   O(n)   | O(1) | Linked List
+CopyOnWriteArrayList | O(n) |  O(n)  | O(1) |   O(n)   | O(1) | Array
