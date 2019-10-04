@@ -130,3 +130,13 @@ public class ThreadDemo {
 	-	Factory design pattern is used when we have a super class with multiple sub-classes and based on input, we need to return one of the sub-class.
 -	Builder Pattern
 	-	Setter methods will return the handle to the instance so that you can call further setters on it. Useful if the class has multiple parameters and all of them are not used all the time.
+
+### Data structures in Java
+
+#### Lists
+
+| Structure  | Order | Thread-safe | Equals & hashCode | Permits null? | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| ArrayList | Insertion order  | No | Deep check | Yes |
+| CopyOnWriteArrayList  | Insertion order  | Yes | Deep check | Yes |
+| LinkedList  | Insertion order | No | Deep check | Yes |
