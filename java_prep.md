@@ -163,3 +163,7 @@ HashMap               | O(1)     |   O(1)      | O(h / n) | Hash Table
 LinkedHashMap         | O(1)     |   O(1)      | O(1)     | Hash Table + Linked List
 TreeMap               | O(log n) |   O(log n)  | O(log n) | Red-black tree
 ConcurrentHashMap     | O(1)     |   O(1)      | O(h / n) | Hash Tables
+
+Note: h means current capacity of the hash collection.
+
+
