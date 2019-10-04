@@ -146,3 +146,20 @@ List                 | Add  | Remove | Get  | Contains | Next | Data Structure
 ArrayList            | O(1) |  O(n)  | O(1) |   O(n)   | O(1) | Array
 LinkedList           | O(1) |  O(1)  | O(n) |   O(n)   | O(1) | Linked List
 CopyOnWriteArrayList | O(n) |  O(n)  | O(1) |   O(n)   | O(1) | Array
+
+#### Maps
+
+| Structure  | Order | Thread-safe | Equals & hashCode | Permits null? | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| TreeMap | Sorted by keys  | No | Deep check | Depends on the comparator |
+| ConcurrentHashMap  | None  | Yes | Deep check | No |
+| HashMap  | None | No | Deep check | Yes |
+| LinkedHashMap  | Insertion order | No | Deep check | Yes |
+
+
+Map                   |   Get    | ContainsKey |   Next   | Data Structure
+----------------------|----------|-------------|----------|-------------------------
+HashMap               | O(1)     |   O(1)      | O(h / n) | Hash Table
+LinkedHashMap         | O(1)     |   O(1)      | O(1)     | Hash Table + Linked List
+TreeMap               | O(log n) |   O(log n)  | O(log n) | Red-black tree
+ConcurrentHashMap     | O(1)     |   O(1)      | O(h / n) | Hash Tables
