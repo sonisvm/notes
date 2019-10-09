@@ -55,6 +55,12 @@ public class ThreadDemo {
 -	When a thread checks for an interrupt by invoking the static method Thread.interrupted, interrupt status is cleared.
 -	By convention, any method that exits by throwing an InterruptedException clears interrupt status when it does so.
 -	The join() method allows one thread to wait for the completion of another.
+-	Callable vs Runnable
+	-	Both are mechanisms to execute threads.
+	-	Callable threads can return the result of execution while Runnable threads cannot.
+	-	Callable's call method can throw Checked exception while Runnable cannot.
+	-	To use Callable interface, we need to override call() method.
+	-	Callable instance can be invoked only through the ExecutorService interface.
 
 #### Synchronization
 -	 Java provides two basic synchronization idioms: synchronized methods and synchronized statements.
